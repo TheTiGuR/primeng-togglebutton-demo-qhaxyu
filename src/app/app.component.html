@@ -1,0 +1,34 @@
+<div class="create-session p-mt-5">
+	<p>Vous pouvez ici créer les sections</p>
+	<div>
+
+	</div>
+	<p-toggleButton onIcon="pi pi-plus" offIcon="pi pi-times" [(ngModel)]="show" (onChange)="handleChange($event)">
+	</p-toggleButton>
+	<div *ngIf="show" class="create-session-form p-grid p-d-flex p-ai-center p-mt-2">
+		<div class="p-col-2 p-d-flex p-jc-end p-ai-center p-text-bold">Ajouter une section :</div>
+		<div class="p-col-10">
+			<span class="p-float-label">
+        <input type="text" id="sessionTitle" pInputText [(ngModel)]="trainingCourse.title" class="p-py-2">
+        <label for="trainingCourseTitle">Titre de la section</label>
+      </span>
+		</div>
+		<div class="p-col-2"></div>
+		<div class="p-col-10 p-py-0">
+			<span class="p-float-label">
+        <p class="goal">Qu'est-ce que les participants seront capables de faire à la fin de cette section ?</p>
+      </span>
+		</div>
+		<div class="p-col-2 p-pt-0"></div>
+		<div class="p-col-10 p-pt-0">
+			<span class="p-float-label">
+        <input type="text" id="sessionGoal" pInputText [(ngModel)]="trainingCourse.title" class="p-py-2">
+        <label for="trainingCourseTitle">Saisir l'objectif de la section</label>
+      </span>
+		</div>
+		<div class="p-d-flex p-jc-end buttons-container p-mt-3">
+			<p-button label="Annuler" class="p-mr-5" (click)="cancelButton()"></p-button>
+			<p-button label="Valider" class="p-mr-5"></p-button>
+		</div>
+	</div>
+</div>
